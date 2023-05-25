@@ -17,6 +17,30 @@
         </div>
       </div>
 
+      <section>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+               
+                @forelse ($trains as $train)
+                    <div class="col">
+                       <div class="card text-start">
+                         <img class="card-img-top" src="holder.js/100px180/" alt="Title">
+                         <div class="card-body">
+                           <h4 class="card-title">Title</h4>
+                           <p class="card-text">Body</p>
+                         </div>
+                       </div>
+                    </div>
+                @empty
+                    <div class="col">
+                        <p>There are no Trains Right Now!!</p>
+                    </div>
+                @endforelse
+
+            </div>
+        </div>
+      </section>
+
 
 
 @endsection
